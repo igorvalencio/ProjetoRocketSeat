@@ -43,6 +43,7 @@ margin: auto;
 body *{
     font-family: 'Inter', sans-serif ;
     color:var(--text-color);
+    text-decoration: none;
 }
 
 #container{
@@ -120,9 +121,11 @@ body *{
     gap: 16px;
     padding: 0px 24px;
     margin: 29px;
+    
 }
-ul li{
+ul li {
     display: flex;
+    text-decoration: none;
     border: 1px solid var(--stroke-color);
     align-items: center;
     justify-content: center;
@@ -134,12 +137,14 @@ ul li{
     font-weight: bold;
     transition: all 0.5s;
      transition: background 0.2s; 
+     
 }
 
 ul li:hover{
     background-color:rgba(255, 255, 255, 0.05); 
     border: 1.5px solid var(--text-color);
 }
+
 
 #icones{
     /* border: 1px solid black; */
