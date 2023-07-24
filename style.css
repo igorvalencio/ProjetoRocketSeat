@@ -1,0 +1,174 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+:root{
+    --text-color: white;
+    --bg-url:url(./assets/bg-mobile.jpg);
+    --stroke-color: rgba(255, 255, 255, 0.5);
+    --surface-color: rgba(255, 255, 255, 0.1);
+    --surface-color-hover:rgba(0, 0, 0, 0.05);
+    --icones-bgcolor-hover:rgba(255, 255, 255, 0.2);
+    --switch-bg-url: url(./assets/moon-stars.svg);
+}
+
+.light{
+    --text-color:black;
+    --bg-url:url(./assets/bg-mobile-light.jpg);
+    --stroke-color: rgba(0, 0, 0, 0.5);
+    --surface-color: rgba(0, 0, 0, 0.05);
+    --surface-color-hover:rgba(0, 0, 0, 0.02);
+    --icones-bgcolor-hover:rgba(0, 0, 0, 0.1);
+    --switch-bg-url: url(./assets/sun.svg);
+}
+
+
+body{
+    /* background-image: url(assets/bg-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover; */
+
+/* Os dois códigos são a mesma coisa...*/
+    background: var(--bg-url) no-repeat top center/cover;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: auto;
+}
+
+body *{
+    font-family: 'Inter', sans-serif ;
+    color:var(--text-color);
+}
+
+#container{
+    /* border: 1px solid black; */
+    width: 350px;
+    height: auto;
+    margin: auto;
+}
+
+#perfil{
+    /* border: 1px solid black; */
+    padding: 24px;
+    width: auto;
+    height: auto;
+}
+ 
+ #perfil  img{
+    border: 1px solid black;
+   display: flex;
+    width: 122px;
+    height: 122px;
+    margin: auto;
+    border-radius: 50%;
+    
+}
+
+ #perfil p {
+    text-align: center;
+    font-weight: bold;
+    line-height: 24px;
+    padding-top: 8px;
+}
+
+ #switch button{
+    height:32px;
+    width: 32px;
+    border-radius: 50%;
+    background: white var(--switch-bg-url) no-repeat center;
+    border: 1px solid black;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top:50%;
+    transform: translateY(-50%);
+    
+}
+#switch span{
+    display: block;
+    height:24px;
+    width:64px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    border-radius: 9999px;
+}
+#switch{
+    /* border: 1px solid black; */
+    position: relative;
+    width:64px;
+    margin: 4px auto;
+}
+
+.light #switch button{
+    right:0;
+    left: initial;
+}
+
+
+ ul {
+    /* border: 1px solid black; */
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0px 24px;
+    margin: 29px;
+}
+ul li{
+    display: flex;
+    border: 1px solid var(--stroke-color);
+    align-items: center;
+    justify-content: center;
+    padding: 16px 24px;
+    background-color: var(--surface-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.5s;
+     transition: background 0.2s; 
+}
+
+ul li:hover{
+    background-color:rgba(255, 255, 255, 0.05); 
+    border: 1.5px solid var(--text-color);
+}
+
+#icones{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    padding: 1px 0;
+    font-size: 24px;
+    margin: 1px 0 0 0;
+}
+
+#icones a{
+    display:flex;
+    align-items: center;
+    padding: 16px;
+    transition: all .5s;
+    border-radius: 50%;
+}
+
+#icones a:hover{ 
+    background: var(--icones-bgcolor-hover)
+}
+
+footer{
+   /* border: 1px solid black; */
+    padding: 10px 0;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
